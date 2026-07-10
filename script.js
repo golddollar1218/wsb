@@ -91,7 +91,7 @@ function initChart() {
     iframe.classList.add("hidden");
     placeholder.classList.remove("hidden");
     link.href = "https://dexscreener.com/robinhood";
-    link.textContent = "Browse Robinhood Chain pairs on DexScreener →";
+    link.textContent = "Browse WallStreetBets Chain pairs on DexScreener →";
     return;
   }
 
