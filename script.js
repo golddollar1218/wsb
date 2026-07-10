@@ -10,7 +10,7 @@ const CONFIG = {
   // uniswap coin page — auto-built from tokenAddress if left empty
   pumpFunUrl: "",
 
-  twitter: "https://x.com/WSBOnRobinX",
+  twitter: "https://x.com/WSBOnRobin_X",
   telegram: "https://t.me/WSBOnRobinTG",
 };
 
