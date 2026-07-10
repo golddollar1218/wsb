@@ -24,6 +24,7 @@
       </a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
         <li><a href="#chart">Chart</a></li>
         <li><a href="#buy">Buy</a></li>
         <li class="nav-socials">
@@ -92,6 +93,49 @@
         </div>
       </div>
     </section>
+
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <p class="section-label centered">On X</p>
+        <h2 class="section-title center">$WSB Gallery</h2>
+        <p class="section-sub center">Robinhood-style visuals for the meme-stock era — tap to expand.</p>
+
+        <div class="gallery-layout">
+          <button type="button" class="gallery-item gallery-featured" data-gallery-src="twitter/twitter-rh-yacht.png" aria-label="View yacht hero post">
+            <img src="twitter/twitter-rh-yacht.png" alt="$WSB yacht hero Twitter post" loading="lazy" />
+          </button>
+
+          <div class="gallery-row gallery-landscapes">
+            <button type="button" class="gallery-item" data-gallery-src="twitter/twitter-rh-clean.png" aria-label="View clean Robinhood post">
+              <img src="twitter/twitter-rh-clean.png" alt="$WSB clean Robinhood Twitter post" loading="lazy" />
+            </button>
+            <button type="button" class="gallery-item" data-gallery-src="twitter/twitter-rh-chart.png" aria-label="View chart post">
+              <img src="twitter/twitter-rh-chart.png" alt="$WSB chart Twitter post" loading="lazy" />
+            </button>
+            <button type="button" class="gallery-item" data-gallery-src="twitter/twitter-post-hero.png" aria-label="View hero post">
+              <img src="twitter/twitter-post-hero.png" alt="$WSB hero Twitter post" loading="lazy" />
+            </button>
+            <button type="button" class="gallery-item" data-gallery-src="twitter/twitter-post-announce.png" aria-label="View announce post">
+              <img src="twitter/twitter-post-announce.png" alt="$WSB announce Twitter post" loading="lazy" />
+            </button>
+          </div>
+
+          <div class="gallery-row gallery-squares">
+            <button type="button" class="gallery-item gallery-square" data-gallery-src="twitter/twitter-rh-green.png" aria-label="View green square post">
+              <img src="twitter/twitter-rh-green.png" alt="$WSB green square Twitter post" loading="lazy" />
+            </button>
+            <button type="button" class="gallery-item gallery-square" data-gallery-src="twitter/twitter-post-logo.png" aria-label="View logo post">
+              <img src="twitter/twitter-post-logo.png" alt="$WSB logo Twitter post" loading="lazy" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="lightbox" id="lightbox" hidden>
+      <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close">×</button>
+      <img src="" alt="" class="lightbox-img" id="lightbox-img" />
+    </div>
 
     <section class="section contract" id="contract">
       <div class="container">

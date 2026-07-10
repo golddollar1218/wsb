@@ -132,9 +132,51 @@ function initSocialLinks() {
   });
 }
 
+function initGallery() {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.getElementById("lightbox-close");
+  if (!lightbox || !lightboxImg) return;
+
+  function openLightbox(src, alt) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || "";
+    lightbox.hidden = false;
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    lightbox.hidden = true;
+    lightboxImg.src = "";
+    document.body.style.overflow = "";
+  }
+
+  document.querySelectorAll("[data-gallery-src]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const src = btn.getAttribute("data-gallery-src");
+      const img = btn.querySelector("img");
+      openLightbox(src, img ? img.alt : "");
+    });
+  });
+
+  closeBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    closeLightbox();
+  });
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initContract();
   initChart();
   initNav();
   initSocialLinks();
+  initGallery();
 });
