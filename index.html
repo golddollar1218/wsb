@@ -3,225 +3,306 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WallStreetBets — $WSB on Robinhood Chain</title>
-  <meta name="description" content="$WSB brings the spirit of the legendary meme-stock era to the Robinhood Chain and unites traders, memes, and decentralized finance for the next generation of market culture." />
-  <meta property="og:title" content="WallStreetBets — $WSB" />
-  <meta property="og:description" content="$WSB brings the spirit of the legendary meme-stock era to the Robinhood Chain." />
-  <meta property="og:image" content="banner.jpg" />
+  <meta name="theme-color" content="#050806" />
+  <title>$WSB — Built Beyond Wall Street</title>
+  <meta name="description" content="$WSB brings the legendary meme-stock spirit to Robinhood Chain, uniting traders, memes, and decentralized finance." />
+  <meta property="og:title" content="$WSB — Built Beyond Wall Street" />
+  <meta property="og:description" content="The meme-stock spirit, rebuilt for the next generation of market culture on Robinhood Chain." />
+  <meta property="og:image" content="banner.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" href="logo.jpg" type="image/jpeg" />
+  <link rel="icon" href="logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav">
-      <a href="#top" class="nav-brand">
-        <img src="logo.jpg" alt="$WSB" class="nav-logo" />
-        <span class="nav-title">$WSB</span>
+  <div class="page-noise" aria-hidden="true"></div>
+  <div class="cursor-aura" id="cursor-aura" aria-hidden="true"></div>
+  <div class="ambient-particles" id="ambient-particles" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#top" class="nav-brand" aria-label="$WSB home">
+        <img src="logo.png" alt="" class="nav-logo" />
+        <span class="nav-wordmark">$WSB</span>
+        <span class="chain-tag">Robinhood Chain</span>
       </a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#gallery">Gallery</a></li>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#story">Story</a></li>
+        <li><a href="#culture">Culture</a></li>
         <li><a href="#chart">Chart</a></li>
-        <li><a href="#buy">Buy</a></li>
-        <li class="nav-socials">
-          <a href="https://t.me/WSBOnRobinTG" data-telegram target="_blank" rel="noopener noreferrer" class="nav-social nav-tg" aria-label="Telegram">
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-          </a>
-          <a href="https://x.com/WSBOnRobin" data-twitter target="_blank" rel="noopener noreferrer" class="nav-social nav-x" aria-label="X / Twitter">
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
-        </li>
+        <li><a href="#buy">How to buy</a></li>
+        <li><a href="https://x.com/WSBOnRobin" target="_blank" rel="noopener noreferrer">X ↗</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
+
+      <a href="#buy" class="nav-cta">Buy $WSB</a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span>
       </button>
     </nav>
   </header>
 
-  <section class="hero" id="top">
-    <div class="hero-banner" aria-hidden="true">
-      <img src="banner.jpg" alt="" class="hero-banner-img" />
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="hero-content">
-      <img src="logo.jpg" alt="WallStreetBets" class="hero-logo" />
-      <p class="hero-brand">$WSB</p>
-      <h1 class="hero-title">WallStreetBets</h1>
-      <p class="hero-tagline">
-        $WSB brings the spirit of the legendary meme-stock era to the Robinhood Chain
-        and unites traders, memes, and decentralized finance for the next generation of market culture.
-      </p>
-      <div class="hero-actions">
-        <a href="https://app.uniswap.org/swap?inputCurrency=ETH&outputCurrency=0x62906ca1a6ec929c6dd487a696aca5f1abb6633f&chain=robinhood" data-pumpfun target="_blank" rel="noopener noreferrer" class="btn btn-rh">Buy $WSB</a>
-        <a href="https://t.me/WSBOnRobinTG" data-telegram target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Telegram</a>
-        <a href="https://x.com/WSBOnRobin" data-twitter target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Follow on X</a>
-      </div>
-    </div>
-  </section>
-
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>$WSB</span><span>·</span><span>Robinhood Chain</span><span>·</span><span>meme-stock era</span><span>·</span><span>traders + memes + DeFi</span><span>·</span><span>market culture</span><span>·</span>
-      <span>$WSB</span><span>·</span><span>Robinhood Chain</span><span>·</span><span>meme-stock era</span><span>·</span><span>traders + memes + DeFi</span><span>·</span><span>market culture</span><span>·</span>
-    </div>
-  </div>
-
   <main>
-    <section class="section about" id="about">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-visual">
-            <img src="logo.jpg" alt="WallStreetBets mascot" class="about-logo" />
+    <section class="hero" id="top">
+      <svg class="market-skyline" viewBox="0 0 1440 600" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="chartFade" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#c7ff00" stop-opacity=".24" />
+            <stop offset="100%" stop-color="#c7ff00" stop-opacity="0" />
+          </linearGradient>
+          <filter id="chartGlow">
+            <feGaussianBlur stdDeviation="4" result="blur" />
+            <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+          </filter>
+        </defs>
+        <path class="market-area" d="M0 510 L90 485 L165 500 L250 420 L335 445 L420 350 L510 390 L590 310 L680 330 L760 235 L850 270 L935 190 L1025 215 L1110 125 L1200 160 L1300 80 L1440 38 L1440 600 L0 600 Z" fill="url(#chartFade)" />
+        <path class="market-line" d="M0 510 L90 485 L165 500 L250 420 L335 445 L420 350 L510 390 L590 310 L680 330 L760 235 L850 270 L935 190 L1025 215 L1110 125 L1200 160 L1300 80 L1440 38" fill="none" stroke="#c7ff00" stroke-width="2" filter="url(#chartGlow)" />
+      </svg>
+      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+      <div class="hero-beam" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><i></i> Community-owned. Built for everyone.</div>
+          <h1><span>We build beyond it.</span></h1>
+          <p class="hero-lede">
+            $WSB brings the spirit of the legendary meme-stock era to Robinhood Chain —
+            uniting traders, memes, and decentralized finance for the next generation of market culture.
+          </p>
+          <div class="hero-actions">
+            <a href="https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0xcomingsoon" target="_blank" rel="noopener noreferrer" class="button button-primary">
+              Buy $WSB <span>↗</span>
+            </a>
+            <a href="#story" class="button button-dark">Discover the story <span>↓</span></a>
           </div>
-          <div class="about-copy">
-            <p class="section-label">The Mission</p>
-            <h2 class="section-title">Meme-stock spirit.<br />On-chain.</h2>
-            <p class="section-text">
-              <strong>$WSB</strong> brings the spirit of the legendary meme-stock era to the
-              <strong>Robinhood Chain</strong> and unites traders, memes, and decentralized finance
-              for the next generation of market culture.
-            </p>
-            <p class="section-text">
-              Same diamond-hands energy. Same community chaos. Now live where Robinhood meets DeFi —
-              built for the next wave of market culture.
-            </p>
+          <div class="hero-meta" aria-label="Token details">
+            <div><span>Network</span><strong>Robinhood Chain</strong></div>
+            <div><span>Ticker</span><strong>$WSB</strong></div>
+            <div><span>Culture</span><strong>Community first</strong></div>
           </div>
         </div>
+
+        <div class="hero-mark reveal" data-tilt data-tilt-strength="7">
+          <div class="portrait-orbit" aria-hidden="true">
+            <span class="orbit orbit-one"></span>
+            <span class="orbit orbit-two"></span>
+          </div>
+          <div class="portrait-card">
+            <img src="logo.png" alt="The $WSB mascot wearing sunglasses and a suit" />
+            <div class="portrait-badge"><span></span> Built on Robinhood</div>
+          </div>
+          <div class="market-chip chip-up" aria-hidden="true"><small>COMMUNITY</small><strong>↑ ALWAYS</strong></div>
+          <div class="market-chip chip-live" aria-hidden="true"><small>STATUS</small><strong><i></i> LIVE</strong></div>
+        </div>
+      </div>
+
+      <div class="container banner-stage reveal" data-tilt data-tilt-strength="2">
+        <div class="banner-topline">
+          <span>THE $WSB MANIFESTO</span>
+          <span>01 — NEW MARKET CULTURE</span>
+        </div>
+        <img src="banner.png" alt="$WSB yacht sailing toward a new community-owned financial future on Robinhood Chain" />
       </div>
     </section>
 
-    <section class="section gallery" id="gallery">
-      <div class="container">
-        <p class="section-label centered">On X</p>
-        <h2 class="section-title center">$WSB Gallery</h2>
-        <p class="section-sub center">Robinhood-style visuals for the meme-stock era — tap to expand.</p>
-
-        <div class="gallery-layout">
-          <button type="button" class="gallery-item gallery-featured" data-gallery-src="twitter/twitter-rh-yacht.png" aria-label="View yacht hero post">
-            <img src="twitter/twitter-rh-yacht.png" alt="$WSB yacht hero Twitter post" loading="lazy" />
-          </button>
-
-          <div class="gallery-row gallery-landscapes">
-            <button type="button" class="gallery-item" data-gallery-src="twitter/twitter-rh-clean.png" aria-label="View clean Robinhood post">
-              <img src="twitter/twitter-rh-clean.png" alt="$WSB clean Robinhood Twitter post" loading="lazy" />
-            </button>
-            <button type="button" class="gallery-item" data-gallery-src="twitter/twitter-rh-chart.png" aria-label="View chart post">
-              <img src="twitter/twitter-rh-chart.png" alt="$WSB chart Twitter post" loading="lazy" />
-            </button>
-            <button type="button" class="gallery-item" data-gallery-src="twitter/twitter-post-hero.png" aria-label="View hero post">
-              <img src="twitter/twitter-post-hero.png" alt="$WSB hero Twitter post" loading="lazy" />
-            </button>
-            <button type="button" class="gallery-item" data-gallery-src="twitter/twitter-post-announce.png" aria-label="View announce post">
-              <img src="twitter/twitter-post-announce.png" alt="$WSB announce Twitter post" loading="lazy" />
-            </button>
-          </div>
-
-          <div class="gallery-row gallery-squares">
-            <button type="button" class="gallery-item gallery-square" data-gallery-src="twitter/twitter-rh-green.png" aria-label="View green square post">
-              <img src="twitter/twitter-rh-green.png" alt="$WSB green square Twitter post" loading="lazy" />
-            </button>
-            <button type="button" class="gallery-item gallery-square" data-gallery-src="twitter/twitter-post-logo.png" aria-label="View logo post">
-              <img src="twitter/twitter-post-logo.png" alt="$WSB logo Twitter post" loading="lazy" />
-            </button>
-          </div>
-        </div>
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>TRADE FREELY</span><b>◆</b><span>HOLD STRONG</span><b>◆</b><span>THINK LONG-TERM</span><b>◆</b><span>BUILD TOGETHER</span><b>◆</b><span>$WSB</span><b>◆</b>
+        <span>TRADE FREELY</span><b>◆</b><span>HOLD STRONG</span><b>◆</b><span>THINK LONG-TERM</span><b>◆</b><span>BUILD TOGETHER</span><b>◆</b><span>$WSB</span><b>◆</b>
       </div>
-    </section>
-
-    <div class="lightbox" id="lightbox" hidden>
-      <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close">×</button>
-      <img src="" alt="" class="lightbox-img" id="lightbox-img" />
     </div>
 
-    <section class="section contract" id="contract">
+    <section class="story section" id="story">
       <div class="container">
-        <p class="section-label centered">Contract</p>
-        <h2 class="section-title center">Token Address</h2>
-        <div class="ca-box">
-          <code id="ca-display" class="ca-address">Loading...</code>
-          <button id="copy-ca" class="btn btn-copy" type="button" title="Copy address">
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
-            <span>Copy</span>
-          </button>
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker">02 — The story</p>
+            <h2>The little guy<br />got an upgrade.</h2>
+          </div>
+          <p>
+            What started as a message-board rebellion became a global market language.
+            $WSB carries that energy on-chain: open, irreverent, and built around the people.
+          </p>
         </div>
-        <p id="copy-toast" class="copy-toast" role="status" aria-live="polite"></p>
+
+        <div class="principles">
+          <article class="principle-card reveal">
+            <span class="principle-icon">↗</span>
+            <span class="principle-num">01</span>
+            <h3>Trade freely</h3>
+            <p>No gatekeepers. Just freedom, ownership, and open access.</p>
+          </article>
+          <article class="principle-card reveal">
+            <span class="principle-icon">◇</span>
+            <span class="principle-num">02</span>
+            <h3>Hold strong</h3>
+            <p>Real ownership. Real value. Conviction belongs to the community.</p>
+          </article>
+          <article class="principle-card reveal">
+            <span class="principle-icon">ϟ</span>
+            <span class="principle-num">03</span>
+            <h3>Think long-term</h3>
+            <p>We build for generations of traders, creators, and believers.</p>
+          </article>
+          <article class="principle-card reveal">
+            <span class="principle-icon">◎</span>
+            <span class="principle-num">04</span>
+            <h3>Build together</h3>
+            <p>Community first. Memes welcome. Everyone moves the culture forward.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section chart-section" id="chart">
+    <section class="culture section" id="culture">
+      <div class="culture-aurora" aria-hidden="true"></div>
       <div class="container">
-        <p class="section-label">Live Chart</p>
-        <h2 class="section-title center">DexScreener</h2>
-        <p class="section-sub center">Track $WSB on Robinhood Chain. Not financial advice.</p>
-        <div class="chart-wrapper">
-          <div id="chart-placeholder" class="chart-placeholder hidden">
-            <p>Set your token address in <code>script.js</code> to enable the live chart.</p>
+        <div class="culture-intro reveal">
+          <p class="section-kicker">03 — The culture</p>
+          <h2>Market culture<br /><span>looks different here.</span></h2>
+          <p>Born from memes. Powered by community. Designed for the next chapter of finance.</p>
+        </div>
+
+        <div class="culture-grid">
+          <button type="button" class="culture-tile tile-hero reveal" data-gallery-src="twitter/wsb-diamond-throne.png">
+            <img src="twitter/wsb-diamond-throne.png" alt="$WSB mascot on a glowing diamond throne above a neon ocean" loading="lazy" />
+            <span class="tile-label">Diamond throne <b>↗</b></span>
+          </button>
+          <button type="button" class="culture-tile reveal" data-gallery-src="twitter/wsb-laser-rocket.png">
+            <img src="twitter/wsb-laser-rocket.png" alt="$WSB mascot riding a neon laser rocket through the market sky" loading="lazy" />
+            <span class="tile-label">Laser rocket <b>↗</b></span>
+          </button>
+          <button type="button" class="culture-tile reveal" data-gallery-src="twitter/wsb-moon-party.png">
+            <img src="twitter/wsb-moon-party.png" alt="$WSB moon party yacht celebration under neon fireworks" loading="lazy" />
+            <span class="tile-label">Moon party <b>↗</b></span>
+          </button>
+          <button type="button" class="culture-tile tile-square reveal" data-gallery-src="twitter/wsb-diamond-hands.png">
+            <img src="twitter/wsb-diamond-hands.png" alt="$WSB mascot holding a glowing diamond fist" loading="lazy" />
+            <span class="tile-label">Diamond hands <b>↗</b></span>
+          </button>
+          <button type="button" class="culture-tile reveal" data-gallery-src="twitter/wsb-beyond-wall-street.png">
+            <img src="twitter/wsb-beyond-wall-street.png" alt="$WSB sailing beyond Wall Street toward a luminous financial future" loading="lazy" />
+            <span class="tile-label">Beyond Wall Street <b>↗</b></span>
+          </button>
+          <button type="button" class="culture-tile reveal" data-gallery-src="twitter/wsb-market-cathedral.png">
+            <img src="twitter/wsb-market-cathedral.png" alt="$WSB mascot inside a luminous futuristic market cathedral" loading="lazy" />
+            <span class="tile-label">Market cathedral <b>↗</b></span>
+          </button>
+          <button type="button" class="culture-tile tile-square reveal" data-gallery-src="twitter/wsb-diamond-signal.png">
+            <img src="twitter/wsb-diamond-signal.png" alt="$WSB mascot framed by a luminous diamond signal" loading="lazy" />
+            <span class="tile-label">Diamond signal <b>↗</b></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="contract section">
+      <div class="container contract-shell reveal">
+        <div class="contract-copy">
+          <p class="section-kicker">Verified contract</p>
+          <h2>Trust the address.<br />Not the noise.</h2>
+        </div>
+        <div>
+          <div class="contract-box">
+            <code id="ca-display">0xcomingsoon</code>
+            <button id="copy-ca" type="button">
+              <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"/></svg>
+              <span>Copy</span>
+            </button>
           </div>
+          <p id="copy-toast" class="copy-toast" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="chart-section section" id="chart">
+      <div class="container">
+        <div class="chart-heading reveal">
+          <div>
+            <p class="section-kicker">04 — Live market</p>
+            <h2>Watch the<br />culture move.</h2>
+          </div>
+          <a id="dexscreener-link" href="https://dexscreener.com/robinhood/0xcomingsoon" target="_blank" rel="noopener noreferrer">Open DexScreener ↗</a>
+        </div>
+        <div class="chart-frame reveal">
+          <div class="chart-frame-top"><span><i></i> $WSB / USD</span><span>15 MIN · LIVE</span></div>
           <iframe
             id="dexscreener-embed"
             class="dexscreener-embed"
-            title="DexScreener $WSB Chart"
+            title="DexScreener $WSB chart"
+            src="https://dexscreener.com/robinhood/0xcomingsoon?embed=1&loadChartSettings=0&trades=0&tabs=0&info=0&chartLeftToolbar=0&chartDefaultOnMobile=1&chartTheme=light&chartStyle=1&chartType=usd&interval=15"
             allow="clipboard-write"
             loading="lazy"
           ></iframe>
         </div>
-        <div class="chart-link-wrap">
-          <a id="dexscreener-link" href="#" target="_blank" rel="noopener noreferrer" class="chart-link">
-            Open full chart on DexScreener →
-          </a>
-        </div>
+        <p class="market-note">Markets move. Memes move faster. Nothing here is financial advice.</p>
       </div>
     </section>
 
-    <section class="section buy" id="buy">
+    <section class="buy section" id="buy">
+      <div class="buy-glow" aria-hidden="true"></div>
+      <div class="buy-rings" aria-hidden="true"><i></i><i></i><i></i></div>
       <div class="container">
-        <p class="section-label centered">How to Buy</p>
-        <h2 class="section-title center">Get Your <span class="accent">$WSB</span></h2>
-        <div class="steps">
-          <article class="step">
-            <span class="step-num">01</span>
-            <h3>Get a Wallet</h3>
-            <p>Use a wallet that supports Robinhood Chain. Fund it with ETH — bridge if you need to.</p>
+        <div class="buy-heading reveal">
+          <p class="section-kicker">05 — Join the movement</p>
+          <h2>Three steps.<br /><span>One ticker.</span></h2>
+        </div>
+
+        <div class="buy-grid">
+          <article class="buy-step reveal">
+            <div class="step-top"><span>01</span><b>WALLET</b></div>
+            <h3>Get connected.</h3>
+            <p>Use a wallet that supports Robinhood Chain and fund it with ETH.</p>
           </article>
-          <article class="step">
-            <span class="step-num">02</span>
-            <h3>Open Uniswap</h3>
-            <p>Connect your wallet and switch to Robinhood Chain. That’s where $WSB lives.</p>
+          <article class="buy-step reveal">
+            <div class="step-top"><span>02</span><b>NETWORK</b></div>
+            <h3>Open Uniswap.</h3>
+            <p>Connect your wallet, then switch the network to Robinhood Chain.</p>
           </article>
-          <article class="step">
-            <span class="step-num">03</span>
-            <h3>Swap ETH → $WSB</h3>
-            <p>Paste the verified contract, confirm the swap, and double-check the address.</p>
+          <article class="buy-step reveal">
+            <div class="step-top"><span>03</span><b>SWAP</b></div>
+            <h3>ETH → $WSB.</h3>
+            <p>Paste the verified contract, review the details, and confirm the swap.</p>
           </article>
         </div>
-        <div class="buy-cta">
-          <a href="https://app.uniswap.org/swap?inputCurrency=ETH&outputCurrency=0x62906ca1a6ec929c6dd487a696aca5f1abb6633f&chain=robinhood" data-pumpfun target="_blank" rel="noopener noreferrer" class="btn btn-rh btn-lg">Buy on Uniswap</a>
-          <a href="https://t.me/WSBOnRobinTG" data-telegram target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">Join Telegram</a>
-          <a href="https://x.com/WSBOnRobin" data-twitter target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">Follow on X</a>
+
+        <div class="buy-banner reveal">
+          <img src="logo.png" alt="" />
+          <div>
+            <small>WELCOME TO THE ROBINHOOD CHAIN</small>
+            <strong>The future is ours.</strong>
+          </div>
+          <a href="https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0xcomingsoon" target="_blank" rel="noopener noreferrer" class="button button-black">Buy $WSB ↗</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer-inner">
+    <div class="container footer-main">
       <div class="footer-brand">
-        <img src="logo.jpg" alt="" class="footer-logo" />
-        <div>
-          <strong>WallStreetBets</strong>
-          <span>$WSB — Robinhood Chain</span>
-        </div>
+        <img src="logo.png" alt="" />
+        <div><strong>$WSB</strong><span>Built beyond Wall Street.</span></div>
       </div>
-      <p class="footer-disclaimer">
-        $WSB is a meme token with no intrinsic value or expectation of financial return. This is not financial advice.
-        DYOR. Inspired by the legendary meme-stock era and community culture.
-      </p>
+      <div class="footer-links">
+        <div><small>Explore</small><a href="#story">Story</a><a href="#culture">Culture</a><a href="#chart">Chart</a></div>
+        <div><small>Community</small><a href="https://x.com/WSBOnRobin" target="_blank" rel="noopener noreferrer">X / Twitter ↗</a></div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>$WSB is a community-driven meme token. No intrinsic value or expectation of financial return. Always DYOR.</p>
+      <span>© 2026 $WSB</span>
     </div>
   </footer>
+
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Artwork preview">
+    <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close preview">×</button>
+    <img src="" alt="" id="lightbox-img" />
+  </div>
 
   <script src="script.js"></script>
 </body>
